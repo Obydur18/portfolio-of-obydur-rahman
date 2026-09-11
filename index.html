@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Obydur Rahman | Mechanical Engineer Portfolio</title>
+    
+    <!-- Tailwind CSS & FontAwesome -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        html { scroll-behavior: smooth; }
+        
+        .gorgeous-bg {
+            background-color: #050a14;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.25) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.2) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(14, 165, 233, 0.15) 0px, transparent 50%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gear-bg {
+            position: absolute;
+            color: rgba(56, 189, 248, 0.04);
+            z-index: 0;
+            pointer-events: none;
+        }
+        .gear-1 { top: -80px; right: -80px; font-size: 400px; animation: spin 45s linear infinite; }
+        .gear-2 { bottom: -120px; left: -120px; font-size: 500px; animation: spin-reverse 55s linear infinite; }
+        
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+        @keyframes spin-reverse { 100% { transform: rotate(-360deg); } }
+
+        .glass-card {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        .glass-card:hover {
+            border-color: rgba(56, 189, 248, 0.5);
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.25);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-sky-500 selection:text-white">
+
+    <!-- BACKGROUND GEARS -->
+    <i class="fa-solid fa-gear gear-bg gear-1"></i>
+    <i class="fa-solid fa-gear gear-bg gear-2"></i>
+
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-50 bg-slate-950/85 backdrop-blur-md border-b border-sky-900/40 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500 tracking-wider flex items-center gap-2">
+                <i class="fa-solid fa-compass-drafting text-sky-400"></i>
+                Md Obydur Rahman
+            </a>
+            <div class="hidden md:flex space-x-6 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-sky-400 transition">About</a>
+                <a href="#education" class="hover:text-sky-400 transition">Education</a>
+                <a href="#skills" class="hover:text-sky-400 transition">Skills</a>
+                <a href="#projects" class="hover:text-sky-400 transition">Projects</a>
+                <a href="#videos" class="hover:text-sky-400 transition">Animations</a>
+                <a href="#certificates" class="hover:text-sky-400 transition">Certificates</a>
+                <a href="#contact" class="hover:text-sky-400 transition text-sky-400 font-semibold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO / ABOUT SECTION -->
+    <section id="about" class="gorgeous-bg relative z-10 py-20 px-6 border-b border-slate-800/80">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+            
+            <!-- PROFILE IMAGE (PERFECTLY CENTERED & ZOOMED IN CIRCLE) -->
+            <div class="relative group flex-shrink-0">
+                <div class="absolute -inset-1 bg-gradient-to-r from-sky-500 via-indigo-500 to-blue-600 rounded-full blur opacity-85 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                <div class="relative w-52 h-52 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-slate-900 shadow-2xl bg-slate-900">
+                    <img src="profile.jpg.jpeg" onerror="this.src='profile.jpg'" alt="Md Obydur Rahman" class="w-full h-full object-cover scale-150 object-center">
+                </div>
+            </div>
+
+            <!-- TEXT INFORMATION -->
+            <div class="text-center md:text-left flex-1">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-2 tracking-tight">
+                    Md Obydur Rahman
+                </h1>
+                
+                <h2 class="text-xl md:text-2xl text-sky-400 font-semibold mb-4 flex items-center justify-center md:justify-start gap-2">
+                    <i class="fa-solid fa-gears text-sky-400"></i> Mechanical Engineer & CAD Specialist
+                </h2>
+                
+                <p class="text-slate-300 text-base md:text-lg mb-6 leading-relaxed max-w-2xl">
+                    Mechanical Engineering student at Khulna University of Engineering & Technology (KUET). Passionate about 3D CAD modeling, SolidWorks motion animations, aerodynamic CFD flow simulations, and innovative mechanical design engineering.
+                </p>
+
+                <!-- SOCIAL LINKS (LINKEDIN, GITHUB, FACEBOOK) -->
+                <div class="flex flex-wrap justify-center md:justify-start gap-3">
+                    <a href="https://www.linkedin.com/in/md-obydur-rahman-845433410/" target="_blank" class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg flex items-center gap-2 transition duration-300 text-sm">
+                        <i class="fa-brands fa-linkedin text-lg"></i> LinkedIn
+                    </a>
+
+                    <a href="https://github.com/obydur-rahman" target="_blank" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-100 font-medium px-5 py-2.5 rounded-lg shadow-lg flex items-center gap-2 transition duration-300 text-sm">
+                        <i class="fa-brands fa-github text-lg"></i> GitHub
+                    </a>
+                    
+                    <a href="https://www.facebook.com/mdobydurrahman.rahman.16" target="_blank" class="bg-gradient-to-r from-blue-800 to-indigo-900 hover:from-blue-700 hover:to-indigo-800 text-white font-medium px-5 py-2.5 rounded-lg shadow-lg flex items-center gap-2 transition duration-300 text-sm">
+                        <i class="fa-brands fa-facebook text-lg"></i> Facebook
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10 space-y-20 py-16">
+
+        <!-- EDUCATION SECTION -->
+        <section id="education">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-sky-400 inline-block border-b-2 border-sky-500 pb-2">Education History</h2>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-6">
+                <div class="glass-card p-6 rounded-2xl border border-sky-800/50 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 hover:-translate-y-1 transition duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="p-3 bg-sky-950/80 rounded-xl border border-sky-700/50 text-sky-400 text-2xl">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Khulna University of Engineering & Technology (KUET)</h3>
+                            <p class="text-sky-300 text-sm font-medium mt-0.5">B.Sc. in Mechanical Engineering</p>
+                        </div>
+                    </div>
+                    <span class="bg-sky-950/90 text-sky-400 border border-sky-700 px-4 py-1.5 rounded-full text-xs font-semibold">Undergraduate</span>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border border-sky-800/50 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 hover:-translate-y-1 transition duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="p-3 bg-slate-900 rounded-xl border border-slate-700 text-sky-400 text-2xl">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Pirganj Govt College</h3>
+                            <p class="text-slate-300 text-sm font-medium mt-0.5">Higher Secondary Certificate (HSC) - Science</p>
+                        </div>
+                    </div>
+                    <span class="bg-slate-800/90 text-slate-300 border border-slate-700 px-4 py-1.5 rounded-full text-xs font-semibold">Completed</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-sky-400 inline-block border-b-2 border-sky-500 pb-2">Technical Skills</h2>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="glass-card p-5 rounded-xl font-semibold text-slate-200 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-cube text-sky-400 text-xl"></i> SolidWorks 3D CAD
+                </div>
+                <div class="glass-card p-5 rounded-xl font-semibold text-slate-200 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-wind text-sky-400 text-xl"></i> CFD & Airfoil Simulation
+                </div>
+                <div class="glass-card p-5 rounded-xl font-semibold text-slate-200 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-play text-sky-400 text-xl"></i> Motion Animations
+                </div>
+                <div class="glass-card p-5 rounded-xl font-semibold text-slate-200 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-code text-sky-400 text-xl"></i> C Programming
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-sky-400 inline-block border-b-2 border-sky-500 pb-2">Featured Projects</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- AIRFOIL SIMULATION -->
+                <div class="glass-card rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300 shadow-xl">
+                    <img src="NACA63-212%20airfoil%20simulation.png" onerror="this.src='NACA63-212 airfoil simulation.png'" alt="NACA Airfoil" class="w-full h-52 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-sky-300 mb-2">NACA63-212 Airfoil Simulation</h3>
+                        <p class="text-slate-400 text-sm mb-4">Aerodynamic pressure distribution and fluid dynamics flow simulation.</p>
+                        <span class="text-xs bg-sky-950 text-sky-400 border border-sky-800 px-3 py-1 rounded-full">CFD Simulation</span>
+                    </div>
+                </div>
+
+                <!-- PROJECT 1 -->
+                <div class="glass-card rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300 shadow-xl">
+                    <img src="project1.jpg.png" onerror="this.src='project1.jpg'" alt="Project 1" class="w-full h-52 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-sky-300 mb-2">Mechanical Part Model 1</h3>
+                        <p class="text-slate-400 text-sm mb-4">Precision mechanical drone frame assembly modeled in SolidWorks.</p>
+                        <span class="text-xs bg-sky-950 text-sky-400 border border-sky-800 px-3 py-1 rounded-full">SolidWorks</span>
+                    </div>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <div class="glass-card rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300 shadow-xl">
+                    <img src="project2.jpg.png" onerror="this.src='project2.jpg'" alt="Project 2" class="w-full h-52 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-sky-300 mb-2">3D Mechanical Component</h3>
+                        <p class="text-slate-400 text-sm mb-4">Engineering design and surface modeling in SolidWorks.</p>
+                        <span class="text-xs bg-sky-950 text-sky-400 border border-sky-800 px-3 py-1 rounded-full">CAD Design</span>
+                    </div>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <div class="glass-card rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300 shadow-xl">
+                    <img src="project3.jpg.png" onerror="this.src='project3.jpg'" alt="Project 3" class="w-full h-52 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-sky-300 mb-2">Aero Mechanical Assembly</h3>
+                        <p class="text-slate-400 text-sm mb-4">Functional component modeling with tolerance specs.</p>
+                        <span class="text-xs bg-sky-950 text-sky-400 border border-sky-800 px-3 py-1 rounded-full">3D Modeling</span>
+                    </div>
+                </div>
+
+                <!-- PROJECT 4 -->
+                <div class="glass-card rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300 shadow-xl">
+                    <img src="project4.jpg.png" onerror="this.src='project4.jpg'" alt="Project 4" class="w-full h-52 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-sky-300 mb-2">Mechanical Wheel Mechanism</h3>
+                        <p class="text-slate-400 text-sm mb-4">Complex wheel and hub mechanical design.</p>
+                        <span class="text-xs bg-sky-950 text-sky-400 border border-sky-800 px-3 py-1 rounded-full">SolidWorks</span>
+                    </div>
+                </div>
+
+                <!-- PROJECT 5 -->
+                <div class="glass-card rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300 shadow-xl">
+                    <img src="project5.jpg.png" onerror="this.src='project5.jpg'" alt="Project 5" class="w-full h-52 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-sky-300 mb-2">Belt & Pulley Transmission</h3>
+                        <p class="text-slate-400 text-sm mb-4">Mechanical power transmission assembly modeling.</p>
+                        <span class="text-xs bg-sky-950 text-sky-400 border border-sky-800 px-3 py-1 rounded-full">Transmission</span>
+                    </div>
+                </div>
+
+                <!-- PROJECT 6 -->
+                <div class="glass-card rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300 shadow-xl">
+                    <img src="project6.png" alt="Project 6" class="w-full h-52 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-sky-300 mb-2">Gear Train Mechanism</h3>
+                        <p class="text-slate-400 text-sm mb-4">Bevel and spur gear design with mating alignments.</p>
+                        <span class="text-xs bg-sky-950 text-sky-400 border border-sky-800 px-3 py-1 rounded-full">Gear Design</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ANIMATIONS / VIDEOS SECTION -->
+        <section id="videos">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-sky-400 inline-block border-b-2 border-sky-500 pb-2">SolidWorks Motion & CFD Animations</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div class="glass-card rounded-2xl overflow-hidden shadow-2xl">
+                    <video controls class="w-full h-64 object-cover">
+                        <source src="movable%20solar%20panel.mp4" type="video/mp4">
+                    </video>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-sky-300 mb-2">Movable Solar Tracker Mechanism</h3>
+                        <p class="text-slate-400 text-sm">Sun-tracking automated solar panel rotation simulation in SolidWorks.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-2xl overflow-hidden shadow-2xl">
+                    <video controls class="w-full h-64 object-cover">
+                        <source src="solidworks_animation.mp4" type="video/mp4">
+                    </video>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-sky-300 mb-2">SolidWorks Motion Animation</h3>
+                        <p class="text-slate-400 text-sm">Kinematic analysis and assembly motion simulation.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-2xl overflow-hidden shadow-2xl">
+                    <video controls class="w-full h-64 object-cover">
+                        <source src="solidworks_animation1.mp4" type="video/mp4">
+                    </video>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-sky-300 mb-2">Gear Mechanism Motion Study</h3>
+                        <p class="text-slate-400 text-sm">Interactive gear engagement and rotational dynamics video.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-2xl overflow-hidden shadow-2xl">
+                    <video controls class="w-full h-64 object-cover">
+                        <source src="solidworks_flow_simulation.mp4" type="video/mp4">
+                    </video>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-sky-300 mb-2">SolidWorks Flow Simulation</h3>
+                        <p class="text-slate-400 text-sm">CFD trajectory flow lines and velocity distribution animation.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CERTIFICATES SECTION -->
+        <section id="certificates">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-sky-400 inline-block border-b-2 border-sky-500 pb-2">Certifications & Achievements</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="glass-card rounded-xl p-5 flex items-center gap-4">
+                    <img src="CSWA.png" alt="CSWA" class="w-24 h-20 object-cover rounded-lg border border-slate-700">
+                    <div>
+                        <h3 class="text-base font-bold text-sky-300">CSWA Certified</h3>
+                        <p class="text-slate-400 text-xs mb-1">SolidWorks Academic Associate</p>
+                        <span class="text-[10px] bg-slate-800 text-sky-400 px-2 py-0.5 rounded border border-slate-700">Verified</span>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-xl p-5 flex items-center gap-4">
+                    <img src="CSWAMA.png" alt="CSWAMA" class="w-24 h-20 object-cover rounded-lg border border-slate-700">
+                    <div>
+                        <h3 class="text-base font-bold text-sky-300">CSWAMA Certified</h3>
+                        <p class="text-slate-400 text-xs mb-1">Additive Manufacturing Advanced</p>
+                        <span class="text-[10px] bg-slate-800 text-sky-400 px-2 py-0.5 rounded border border-slate-700">Verified</span>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-xl p-5 flex items-center gap-4">
+                    <img src="CSWDA.png" alt="CSWDA" class="w-24 h-20 object-cover rounded-lg border border-slate-700">
+                    <div>
+                        <h3 class="text-base font-bold text-sky-300">CSWDA Certified</h3>
+                        <p class="text-slate-400 text-xs mb-1">SolidWorks Drawing Tools</p>
+                        <span class="text-[10px] bg-slate-800 text-sky-400 px-2 py-0.5 rounded border border-slate-700">Verified</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-sky-400 inline-block border-b-2 border-sky-500 pb-2">Get In Touch</h2>
+            </div>
+
+            <div class="max-w-3xl mx-auto glass-card p-8 rounded-2xl border border-slate-800">
+                <form action="mailto:your-email@example.com" method="post" enctype="text/plain" class="space-y-6">
+                    <div>
+                        <label class="block text-slate-300 text-sm font-medium mb-2">Your Name</label>
+                        <input type="text" placeholder="Enter your full name" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-sky-500">
+                    </div>
+                    <div>
+                        <label class="block text-slate-300 text-sm font-medium mb-2">Your Email</label>
+                        <input type="email" placeholder="Enter your email address" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-sky-500">
+                    </div>
+                    <div>
+                        <label class="block text-slate-300 text-sm font-medium mb-2">Message</label>
+                        <textarea rows="4" placeholder="Type your message here..." class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-sky-500"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-semibold py-3 rounded-lg shadow-lg transition duration-300">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="py-8 text-center text-slate-500 text-sm border-t border-slate-800/80 bg-slate-950 relative z-10">
+        <p>&copy; 2026 Md Obydur Rahman. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
